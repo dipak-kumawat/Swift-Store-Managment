@@ -442,7 +442,7 @@ class SwiFT_Store final{
 				Glbl::Gotoxy(x,y+z);
 				for (unsigned char k=1;k<=17;++k){
 					if (j==1||j==3||k==1||k==17)
-						cout<<"-";
+						cout<<"?";
 					else
 						cout<<" ";
 				}
@@ -948,12 +948,12 @@ public:
 			}
 		}
 		while(true){
-			Glbl::Gotoxy(47,5);
-			cout<<"-----------------------";
-			Glbl::Gotoxy(47,6);
+			Glbl::Gotoxy(47,3);
+			cout<<"vvvvvvvvvvvvvvvvvvvvvvv";
+			Glbl::Gotoxy(47,4);
 			cout<<"!!!!   MAIN-MENU   !!!!";
-			Glbl::Gotoxy(47,7);
-			cout<<"-----------------------";
+			Glbl::Gotoxy(47,5);
+			cout<<"^^^^^^^^^^^^^^^^^^^^^^^";
 			Display_Boxes(3,50,8);
 			Glbl::Gotoxy(52,9);
 			cout<<"Retailer Menu";
