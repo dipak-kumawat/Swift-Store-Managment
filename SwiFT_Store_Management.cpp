@@ -442,7 +442,7 @@ class SwiFT_Store final{
 				Glbl::Gotoxy(x,y+z);
 				for (unsigned char k=1;k<=17;++k){
 					if (j==1||j==3||k==1||k==17)
-						cout<<"?";
+						cout<<"*";
 					else
 						cout<<" ";
 				}
@@ -656,7 +656,7 @@ class SwiFT_Store final{
 					break;
 				case 2:
 					cout<<"\n !!! RETAILER-MENU / SAVE DATA !!!"
-						  "\n^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n";
+						  "\n-----------------------------------\n";
 					if(!List.Items_Counter){
 						cout<<"Warning: No Items Present in List!\n\a";
 						system("pause");
@@ -674,7 +674,7 @@ class SwiFT_Store final{
 				case 3:
 					if (Cursor_Pos==3)
 						cout<<"\n !!! RETAILER-MENU / RETRIEVE DATA !!!"
-							  "\n^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n";						
+							  "\n-----------------------------------\n";						
 					if(!Data_Base_Counter){
 						cout<<"\nWarning: No Data_Base Found!\n\a";
 						system("pause");
@@ -708,7 +708,7 @@ class SwiFT_Store final{
 					break;
 				case 6:{//i.e. defined local scope in order to skip cross initialization for 'case' labels
 					cout<<"\n !!! RETAILER-MENU / DELETE DATABASE !!!"
-						  "\n^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n";
+						  "\n----------------------------------------\\n";
 					if(!Data_Base_Counter){
 						cout<<"\nWarning: No Data_Base Found!\n\a";
 						system("pause");
@@ -749,7 +749,7 @@ class SwiFT_Store final{
 					return true;
 				case 8:{
 					cout<<"\n !!! RETAILER-MENU / CHANGE PASSWORD !!!"
-						  "\n^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n";
+						  "\n-----------------------------------------\\n";
 					string Pass,Temp_Pass;
 					ifstream fin("Data_Files/Hidden_Files/Retailer_Pass.txt");
 				Re_Enter:
@@ -773,7 +773,7 @@ class SwiFT_Store final{
 				}
 				case 9:{
 					cout<<"\n !!! RETAILER-MENU / SET CUSTOMER DATABASE !!!		(Current Customer_Data_Base: "<<Customer_Data_Base_Index<<")"
-						  "\n^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n";
+						  "\n-----------------------------------------------\\n";
 					if(!Data_Base_Counter){
 						cout<<"\nWarning: No Data_Base Found!\n\a";
 						system("pause");
@@ -799,10 +799,10 @@ class SwiFT_Store final{
 				case 5:
 					if(Cursor_Pos==4)
 						cout<<"\n !!! RETAILER-MENU / ENCRYPT DATABASE !!!"
-							  "\n^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n";
+							  "\n-------------------------------------------\\n";
 					else
 						cout<<"\n !!! RETAILER-MENU / DECRYPT DATABASE !!!"
-							  "\n^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n";
+							  "\n-------------------------------------------\\n";
 					if(!Data_Base_Counter){
 						cout<<"\nWarning: No Data_Base Found!\n\a";
 						system("pause");
@@ -877,7 +877,7 @@ class SwiFT_Store final{
 		float Total_Price=0;
 		while(true){
 			Glbl::Validate_Input(Choice,5,"\n   !!! CUSTOMER-MENU !!!"
-										  "\n   ^^^^^^^^^^^^^^^^^^^^^\n"
+										  "\n   ----------------------\n"
 										  " 1)   View Items List\n"
 										  " 2)   Select Item\n"
 										  " 3)   Proceed to Checkout\n"
